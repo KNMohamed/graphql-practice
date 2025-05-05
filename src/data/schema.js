@@ -30,6 +30,9 @@ const typeDefs = `
         createContact(
             input: ContactInput
         ): Contact
+        updateContact(
+            input: ContactInput
+        ): Contact
     }
 `
 

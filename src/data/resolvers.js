@@ -27,6 +27,13 @@ export const resolvers = {
             } catch (error) {
                 throw new Error(error);
             }
+        },
+        updateContact: async (root, {input}) => {
+            try {
+                return await Contacts.findOneAndUpdate({ _id: input.id }, input, { new: true });
+            } catch (error) {
+                throw new Error(error);
+            }
         }
     }
 }
