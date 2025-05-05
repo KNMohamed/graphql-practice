@@ -5,15 +5,21 @@
  * @version 1.0.0
  * @license MIT
  */
+import mongoose from 'mongoose';
 
-export const ContactSchema = new mongoose.Schema({
+//Mongo connection
+mongo.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/contacts', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+const contactSchema = new mongoose.Schema({
     firstName: {
         type: String,
-        required: 'Enter a first name'
     },
     lastName: {
         type: String,
-        required: 'Enter a last name'
     },
     email: {
         type: String
@@ -22,3 +28,7 @@ export const ContactSchema = new mongoose.Schema({
         type: String
     }
 });
+
+const Contacts = mongoose.model('contacts', contactSchema);
+
+export {Contacts};
