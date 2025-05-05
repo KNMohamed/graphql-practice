@@ -33,6 +33,9 @@ const typeDefs = `
         updateContact(
             input: ContactInput
         ): Contact
+        deleteContact(
+            id: ID!
+        ): Contact    
     }
 `
 

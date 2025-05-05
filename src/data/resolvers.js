@@ -34,6 +34,13 @@ export const resolvers = {
             } catch (error) {
                 throw new Error(error);
             }
+        },
+        deleteContact: async (root, {id}) => {
+            try {
+                return await Contacts.findByIdAndDelete(id);
+            } catch (error) {
+                throw new Error(error);
+            }
         }
     }
 }
