@@ -8,8 +8,10 @@
 import mongoose from 'mongoose';
 
 //Mongo connection
-mongo.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/contacts', {
+mongoose.Promise = global.Promise;
+const uri = "mongodb+srv://Cluster58621:y96ZD40CSG1jBFJb@cluster58621.nxoiayn.mongodb.net/contacts";
+
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
