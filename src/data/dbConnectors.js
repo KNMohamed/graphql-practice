@@ -1,8 +1,12 @@
-import mongoose from 'mongoose';
+/**
+ * @fileoverview This file connects our graphql schema to the database.
+ * 
+ * @author Khalid Mohamed
+ * @version 1.0.0
+ * @license MIT
+ */
 
-const Schema = mongoose.Schema;
-
-export const ContactSchema = new Schema({
+export const ContactSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: 'Enter a first name'
@@ -16,12 +20,5 @@ export const ContactSchema = new Schema({
     },
     company: {
         type: String
-    },
-    phone: {
-        type: Number
-    },
-    created_date: {
-        type: Date,
-        default: Date.now
     }
 });
