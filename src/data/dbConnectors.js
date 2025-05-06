@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 
 //Mongo connection
 mongoose.Promise = global.Promise;
-const uri = "mongodb+srv://Cluster58621:y96ZD40CSG1jBFJb@cluster58621.nxoiayn.mongodb.net/contacts";
+const uri = "mongodb+srv://<user>:<pass>@cluster58621.nxoiayn.mongodb.net/contacts";
 
 mongoose.connect(uri, {
     useNewUrlParser: true,
